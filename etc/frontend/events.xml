@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Reference: https://www.human-element.com/magento-2-bug-rewards-points-payment-decline/ -->
+    <event name="order_cancel_after">
+        <observer name="magento_giftcardaccount" instance="Magento\GiftCardAccount\Observer\ReturnFundsToStoreCredit" />
+    </event>
+</config>
